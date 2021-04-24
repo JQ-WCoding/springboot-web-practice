@@ -12,7 +12,7 @@ import javax.persistence.*;
 // @Entity 테이블과 링크될 클래스
 // 클래스의 카멜케이스 이름을 언더스코어 네이밍으로 매칭 ex)SpringBoot = spring_boot
 @Entity
-public class Posts {
+public class  Posts{
     // PK -> primary key
     @Id
     // auto increment 자동으로 하나씩 증가하는 역할을 해줌
