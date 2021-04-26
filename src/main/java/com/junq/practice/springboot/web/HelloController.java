@@ -15,7 +15,8 @@ public class HelloController {
         return "hello";
     }
 
-    @GetMapping
+    //과장님 감사합니다 ㅜ
+    @GetMapping("/hello/dto")
     // RequestPara(" ") 는 해당 메소드 파라미터로 받아야할 외부 파라미터를 지정해주는 역할을 한다.
     public HelloResponseDto helloDto(@RequestParam("name") String name, @RequestParam("amount") int amount){
         return new HelloResponseDto(name, amount);
