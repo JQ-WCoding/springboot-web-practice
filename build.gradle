@@ -52,6 +52,9 @@ dependencies {
     compile('com.h2database:h2')
     // 머스테치 의존성 주입
     compile('org.springframework.boot:spring-boot-starter-mustache')
+    // security 관련 의존성
+    // 클라이언트 입장에 소셜 기능 구현 시 필요
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
 }
 
 //test {
