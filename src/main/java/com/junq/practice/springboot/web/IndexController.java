@@ -1,5 +1,6 @@
 package com.junq.practice.springboot.web;
 
+import com.junq.practice.springboot.config.auth.LoginUser;
 import com.junq.practice.springboot.config.auth.dto.SessionUser;
 import com.junq.practice.springboot.service.posts.PostsService;
 import com.junq.practice.springboot.web.dto.PostsResponseDto;
@@ -21,11 +22,12 @@ public class IndexController {
     // 앞 경로 src/main/resources/templates
     // .mustache
     @GetMapping ( "/" )
-    public String index(Model model) {
+    // @LoginUser -> 기존 SessionUser로 가져오던 부분을 어노테이션으로 개선
+    public String index(Model model, @LoginUser SessionUser user) {
         // 서버 템플릿 엔진에서 사용가능한 객체 model
         // 해당 결과를 posts로 index.mustache에 전달
         model.addAttribute( "posts", postsService.findAllDesc() );
-        SessionUser user = ( SessionUser ) httpSession.getAttribute( "user" );
+        // SessionUser user = ( SessionUser ) httpSession.getAttribute( "user" );
         if ( user != null ) {
             model.addAttribute( "userName", user.getName() );
         }

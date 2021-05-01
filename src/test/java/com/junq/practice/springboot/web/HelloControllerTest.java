@@ -13,12 +13,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 
 import org.springframework.test.web.servlet.ResultActions;
-@RunWith(SpringRunner.class)
 // JUnit에 내장된 실행자 외에 다른 실행자를 실행
 // Springboot test 와 JUnit 사이의 연결자
-@WebMvcTest(controllers = HelloController.class)
+@RunWith(SpringRunner.class)
 // Web(Spring MVC)에 집중할 수 있는 어노테이션 @Controller @ControllerAdvice 사용가능
 // @Service @Component @ Repository 사용 불가
+@WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
     @Autowired
     // 빈 (bean) 주입
