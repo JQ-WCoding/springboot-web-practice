@@ -16,7 +16,8 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class IndexController {
     private final PostsService postsService;
-    private final HttpSession httpSession;
+    // @LoginUser 를 통해 session 사용 필요 없어짐
+    // private final HttpSession httpSession;
 
     // 머스테치로 인해 앞의 경로와 뒤의 파일확장자는 자동으로 지정
     // 앞 경로 src/main/resources/templates
