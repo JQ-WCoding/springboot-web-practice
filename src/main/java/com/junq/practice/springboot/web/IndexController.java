@@ -41,7 +41,7 @@ public class IndexController {
     }
 
     @GetMapping ( "/posts/update/{id}" )
-    // PathVariable의 존재 이유! : Url 의 {} 영역의 값을 지정해주기 위해 해당 메소드의 파라미터에 정확히 어떤걸 넣을 것이다
+    // PathVariable 의 존재 이유! : Url 의 {} 영역의 값을 지정해주기 위해 해당 메소드의 파라미터에 정확히 어떤걸 넣을 것이다
     // 선언해서 확실하게 지정해주어야한다
     public String postsUpdate(@PathVariable Long id, Model model) {
         PostsResponseDto dto = postsService.findById( id );
