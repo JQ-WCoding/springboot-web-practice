@@ -9,9 +9,9 @@ public class HelloResponseDtoTest {
         //given
         String name = "test";
         int amount = 1000;
-
         // when
         HelloResponseDto dto = new HelloResponseDto(name, amount);
+        // 위의 필드값을 이용해 dto 를 새로 인스턴스화 한후 해당 값이 잘 적용되었는지 확인
 
         // then
         assertThat(dto.getName()).isEqualTo(name);

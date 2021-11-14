@@ -25,10 +25,10 @@ public class PostsService {
         return postsRepository.save( requestDto.toEntity() ).getId();
     }
 
-    @Transactional
     // update 데이터베이스에 쿼리를 제거하는 부분이 없음
     // JPA 영속성 컨텍스트 떄문 (엔티티를 영구 저장하는 환경)
     // Entity 객체의 값만 변경하면 Update 쿼리가 필요없음 = 더티체킹
+    @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto) {
         // lambda
         Posts posts = postsRepository.findById( id ).orElseThrow( () -> new IllegalArgumentException( "해당 게시글이 없습니다. id =" + id ) );
