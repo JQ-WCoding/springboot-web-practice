@@ -6,3 +6,4 @@ application-oauth.properties
 application-google.properties
 build.gradle
 /src/main/resources/application.properties
+/build
