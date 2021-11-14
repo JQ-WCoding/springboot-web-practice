@@ -24,6 +24,7 @@ public class PostsApiController {
      * 화면을 이동할 필요가 없는 경우 view 페이지의 이동이 없기에 url 을 리턴할 필요가 없다
      * ajax 를 이용한 비동기 방식으로 인해 내가 필요로 하는 data 를 받아와 다시 반환하여 해당 현재 페이지에 검색 등을 한 데이터를 다시 반환하여 view 에 보여줄 수 있도록 한다.
      */
+
     @PutMapping("/api/v1/posts/{id}")
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto requestDto){
         return postsService.update( id, requestDto );
