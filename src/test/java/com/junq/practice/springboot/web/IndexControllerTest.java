@@ -20,6 +20,7 @@ public class IndexControllerTest {
     @Test
     public void 메인페이지_로딩() {
         // when
+        // '/' url 로 부터 String 객체를 받아서 body 변수에 대입
         String body = this.restTemplate.getForObject( "/", String.class );
 
         //then

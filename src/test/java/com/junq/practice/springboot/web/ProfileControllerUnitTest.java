@@ -10,6 +10,7 @@ public class ProfileControllerUnitTest {
     public void real_Profile이_조회된다() {
         //given
         String expectedProfile = "real";
+        // test 용 환경 설정
         MockEnvironment mockEnvironment = new MockEnvironment();
         mockEnvironment.addActiveProfile( expectedProfile );
         mockEnvironment.addActiveProfile( "oauth" );
