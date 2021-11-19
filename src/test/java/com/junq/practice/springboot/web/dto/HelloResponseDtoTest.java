@@ -3,6 +3,7 @@ package com.junq.practice.springboot.web.dto;
 import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+// DTO 의 값이 제대로 넘어오는지 확인하기 위한 단위 test
 public class HelloResponseDtoTest {
     @Test
     public void 롬복_기능_테스트(){

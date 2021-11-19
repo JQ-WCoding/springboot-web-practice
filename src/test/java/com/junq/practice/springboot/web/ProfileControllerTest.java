@@ -25,7 +25,10 @@ public class ProfileControllerTest {
     public void profile은_인증없이_호출된다() throws Exception {
         String expected = "default";
         ResponseEntity<String> response = restTemplate.getForEntity( "/profile", String.class );
+        // assertThat() -> 비교를 통해 문제 여부를 확인하는 메소드
+        // 응답 상태가 HttpStatus 의 OK 인 200과 동일한지 확인
         assertThat( response.getStatusCode() ).isEqualTo( HttpStatus.OK );
+        // expected 변수의 값 'default' 가 그대로 body 에 담겨 응답되는지 확인
         assertThat( response.getBody() ).isEqualTo( expected );
     }
 
