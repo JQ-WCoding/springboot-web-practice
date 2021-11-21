@@ -101,7 +101,9 @@ public class PostsApiControllerTest {
                 .author( "author" )
                 .build() );
 
+        // 업데이트 아이디를 등록한 게시글의 아이디에서 가져와 사용한다
         Long updateId = savedPosts.getId();
+        // 반환값으로 받아야할 제목과 내용 지정
         String expectedTitle = "title2";
         String expectedContent = "content2";
 

@@ -47,7 +47,9 @@ public class ProfileControllerUnitTest {
     public void active_profile이_없으면_default가_조회된다() {
         //given
         String expectedProfile = "default";
+        // MOCK 환경 세팅
         MockEnvironment mockEnvironment = new MockEnvironment();
+        // 아이디 로그인 유무 상태를 화긴하는 컨트롤러 클래스
         ProfileController controller = new ProfileController( mockEnvironment );
 
         //when
