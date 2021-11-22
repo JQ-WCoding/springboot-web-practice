@@ -33,14 +33,16 @@ public class PostsService {
     public Long update(Long id, PostsUpdateRequestDto requestDto) {
         // lambda
         Posts posts = postsRepository.findById( id ).orElseThrow( () -> new IllegalArgumentException( "해당 게시글이 없습니다. id =" + id ) );
-
+        // 해당 게시글의 제목과 내용을 update
         posts.update( requestDto.getTitle(), requestDto.getContent() );
-
+        // 게시글 아이디만 반환한다
         return id;
     }
 
     public PostsResponseDto findById(Long id) {
+        // Posts 클래스로 파라미터로 받은 아이디를 생성 및 초기화 하여
         Posts entity = postsRepository.findById( id ).orElseThrow( () -> new IllegalArgumentException( "해당 게시글이 없습니다. id =" + id ) );
+        // PostsResponseDto 생성자에 entity 를 넘겨 새로 인스턴스화한다
         return new PostsResponseDto( entity );
     }
 
